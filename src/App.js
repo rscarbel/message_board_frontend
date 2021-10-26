@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useCallback, useState, useEffect } from 'react'
 import "./App.css";
 import Message from './components/Message'
 
@@ -14,7 +14,7 @@ export default function App() {
 
   function handleChange(event) {
     setState(({ messages, newMessage }) => ({
-      messages,
+      ...messages,
       newMessage: {
         ...newMessage,
         [event.target.name]: event.target.value
@@ -45,7 +45,7 @@ export default function App() {
     }));
   }
 
-  async function getMessages() {
+  const getMessages = useCallback (async () => {
     const response = await fetch('https://ga-message-board-backend.herokuapp.com/api/messages');
     const savedMessages = await response.json();
 
@@ -53,7 +53,7 @@ export default function App() {
       savedMessages,
       newMessage: prevState.newMessage
     }));
-  }
+  })
 
   useEffect(() => {
     getMessages();
