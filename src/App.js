@@ -5,16 +5,16 @@ import Message from './components/Message'
 export default function App() {
 
   const [state, setState] = useState({
-    messages: [],
+    savedMessages: [],
     newMessage: {
-      skill: "",
-      level: "3"
+      username: "",
+      message: ""
     }
   });
 
   function handleChange(event) {
-    setState(({ message, newMessage }) => ({
-      message,
+    setState(({ messages, newMessage }) => ({
+      messages,
       newMessage: {
         ...newMessage,
         [event.target.name]: event.target.value
@@ -37,7 +37,7 @@ export default function App() {
     getMessages();
 
     setState((prevState) => ({
-      ...prevState,
+      prevState,
       newMessage: {
         username: '',
         message: ''
@@ -47,10 +47,10 @@ export default function App() {
 
   async function getMessages() {
     const response = await fetch('https://ga-message-board-backend.herokuapp.com/api/messages');
-    const messages = await response.json();
+    const savedMessages = await response.json();
 
     setState((prevState) => ({
-      messages,
+      savedMessages,
       newMessage: prevState.newMessage
     }));
   }
@@ -59,11 +59,11 @@ export default function App() {
     getMessages();
   }, []);
 
-
+  console.log(state)
   return (
     <section>
       <h1>Message Board</h1>
-      {state.message.map((item) => (
+      {state.savedMessages.map((item) => (
           <Message username={item.username} content={item.message} />
       ))}
       <hr />
