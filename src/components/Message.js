@@ -27,7 +27,7 @@ const Message = (props) => {
       minute = `0${minute}`
     }
 
-    let time = `${month}/${day}/${year}⠀⠀⠀${hour}:${minute}`
+    let time = `${month}/${day}/${year}    ${hour}:${minute}`
 
     if (am) {
       time = `${time} am`
