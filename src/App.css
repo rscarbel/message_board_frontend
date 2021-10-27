@@ -123,3 +123,33 @@ tr:last-child > td:first-child {
 tr:last-child > td:last-child {
   border-radius: 0 0 8px 0;
 }
+
+.message {
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  margin: 1em;
+  padding: 0 1em;
+  border-radius: 10px;
+}
+.messageTitle {
+  text-align: left;
+  font-size: 1.1em;
+}
+
+.time {
+  text-align: right;
+  font-size: 0.7em;
+}
+
+.message-container {
+  text-align: left;
+  margin:auto;
+  max-width: 600px;
+}
+
+textarea {
+  min-height: 10em;
+  min-width: 17em;
+  margin: 0 0 0 1em;
+  resize: none;
+}
