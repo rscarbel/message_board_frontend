@@ -20,18 +20,20 @@ export default function App() {
     setState((prevState) => ({
       savedMessages
     }));
-  })
+  },[])
 
   useEffect(() => {
     getMessages();
-  }, []);
+  }, [getMessages]);
 
   return (
     <>
       <h1>Message Board</h1>
-      {state.savedMessages.map((item) => (
-          <Message username={item.username} content={item.message} />
+      <div className='message-container'>
+      {state.savedMessages.map((item,index) => (
+          <Message username={item.username} content={item.message} time={item.createdAt} key={index} />
       ))}
+      </div>
   <Form />
     </>
   );
