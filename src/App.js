@@ -22,8 +22,7 @@ export default function App() {
 
   useEffect(() => {
     getMessages();
-
-  }, [getMessages]);
+  });
 
   return (
     <>
