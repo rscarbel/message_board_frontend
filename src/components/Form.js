@@ -36,7 +36,7 @@ const Form = (props) => {
   <form onSubmit={handleSubmit}>
         <label>
           <span>Username</span>
-          <input name='username' type='text' maxLength='30' required value={state.username} onChange={handleChange} />
+          <input name='username' type='text' maxLength='30' value={state.username} onChange={handleChange} />
         </label>
         <label>
           <span>Message</span>
