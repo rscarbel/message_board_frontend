@@ -28,6 +28,7 @@ export default function App() {
       {state.savedMessages.map((item,index) => (
           <Message username={item.username} content={item.message} time={item.createdAt} key={index} />
       ))}
+      <div className="bottom-of-chat"></div>
       </div>
   <Form />
     </>
