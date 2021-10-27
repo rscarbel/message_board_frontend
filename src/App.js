@@ -1,10 +1,10 @@
-import { useCallback, useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import "./App.css";
 import Form from './components/Form'
 import Message from './components/Message'
 
 export default function App() {
-
+  const messageBottom = useRef()
   const [state, setState] = useState({
     savedMessages: []
   });
@@ -15,10 +15,14 @@ export default function App() {
     setState((prevState) => ({
       savedMessages
     }));
+    if ((state.savedMessages.length < savedMessages.length) || (state.savedMessages.length === 0)) {
+      messageBottom.current.scrollIntoView()
+    }
   }
 
   useEffect(() => {
     getMessages();
+
   }, [getMessages]);
 
   return (
@@ -28,7 +32,7 @@ export default function App() {
       {state.savedMessages.map((item,index) => (
           <Message username={item.username} content={item.message} time={item.createdAt} key={index} />
       ))}
-      <div className="bottom-of-chat"></div>
+      <div ref={messageBottom} ></div>
       </div>
   <Form />
     </>
