@@ -54,6 +54,7 @@ form > label {
   justify-content: space-between;
   align-items: center;
   margin: 0.5em;
+  white-space: pre;
 }
 form > label > input {
   margin-left: 2em;
@@ -87,6 +88,7 @@ form > button:hover {
 .time {
   text-align: right;
   font-size: 0.7em;
+  white-space: pre;
 }
 
 .message-container {
