@@ -22,5 +22,11 @@ The user will have to scroll down for a long time when many posts get added.
 Project is no longer being supported.
 
 -------
-## Backend Location ##
+### Backend Location ###
 https://github.com/rscarbel/message_board_backend
+
+### Trello Location ###
+https://trello.com/b/IkwHF8HV/message-board
+
+### Invision Location ###
+https://ryan351647.invisionapp.com/freehand/Message-Board-Se1ZrXYfe
