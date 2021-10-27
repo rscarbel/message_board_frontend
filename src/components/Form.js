@@ -43,7 +43,7 @@ const Form = (props) => {
   return <>
   <form onSubmit={handleSubmit}>
         <label>
-          <span>Username</span>
+          <span>Username{<br />}(optional)</span>
           <input name='username' type='text' maxLength='30' value={state.username} onChange={handleChange} />
         </label>
         <label>
