@@ -9,18 +9,13 @@ export default function App() {
     savedMessages: []
   });
 
-
-
-
-
-  const getMessages = useCallback (async () => {
+  const getMessages = async () => {
     const response = await fetch('https://ga-message-board-backend.herokuapp.com/api/messages');
     const savedMessages = await response.json();
-
     setState((prevState) => ({
       savedMessages
     }));
-  },[])
+  }
 
   useEffect(() => {
     getMessages();
