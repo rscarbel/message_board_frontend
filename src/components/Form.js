@@ -1,4 +1,4 @@
-import { useCallback, useState, useEffect } from 'react'
+import { useState } from 'react'
 const Form = (props) => {
 
   const [state, setState] = useState({
@@ -24,7 +24,7 @@ const Form = (props) => {
       headers: {
         'Content-type': 'Application/json'
       },
-      body: JSON.stringify(state)
+      body: JSON.stringify(state.newMessage)
     });
 
     setState((prevState) => ({
@@ -36,11 +36,11 @@ const Form = (props) => {
   <form onSubmit={handleSubmit}>
         <label>
           <span>Username</span>
-          <input name='username' type='text' value={state.username} onChange={handleChange} />
+          <input name='username' type='text' maxLength='30' required value={state.username} onChange={handleChange} />
         </label>
         <label>
           <span>Message</span>
-          <textarea name='username' value={state.message} onChange={handleChange} />
+          <textarea name='message' maxLength='500' required value={state.message} onChange={handleChange} />
         </label>
         <button>Send</button>
       </form>
