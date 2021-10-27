@@ -1,0 +1,3 @@
+const BadWords = /\b(fuck)\b|\b(fucking)\b|\b(shit)\b|\b(shitty)\b|\b(ass)\b|\b(nigger)\b|\b(nigga)\b|\b(cunt)\b|\b(asshole)\b|\b(fucker)\b|\b(motherfucker)\b|\b(bitch)\b|\b(bitches)\b|\b(fuckers)\b|\b(twat)\b|\b(twats)\b|\b(wanker)\b|\b(wankers)\b|\b(cum)\b|\b(cumming)\b|\b(whore)\b|\b(whores)\b|\b(damn)\b|\b(damnit)\b|\b(dammit)\b|\b(cunts)\b|\b(niggers)\b|\b(niggas)\b|\b(bullocks)\b|\b(asses)\b/gmi
+
+export default BadWords
