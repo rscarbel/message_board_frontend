@@ -1,7 +1,7 @@
 # Introduction
 The fastest made project I've produced. Made in one afternoon with a decoupled front end and back end. It is a simple forum/message board. Write what you want on it, but remember, the internet is forever.
 
-[Check it out here!](https://project-3-front-end-ga.herokuapp.com/).
+[Check it out here!](https://project-3-front-end-ga.herokuapp.com/)
 
 # Technologies Used
 * Javascript
