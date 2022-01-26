@@ -1,6 +1,8 @@
 # Introduction
 The fastest made project I've produced. Made in one afternoon with a decoupled front end and back end. It is a simple forum/message board. Write what you want on it, but remember, the internet is forever.
 
+[Check it out here!](https://project-3-front-end-ga.herokuapp.com/).
+
 # Technologies Used
 * Javascript
 * HTML
@@ -10,13 +12,6 @@ The fastest made project I've produced. Made in one afternoon with a decoupled f
 * Express
 * MongoDB
 * Mongoose
-
-# Getting Started
-Deployment link: https://project-3-front-end-ga.herokuapp.com/
-Repository: npm start
-
-# Unsolved Problems
-The user will have to scroll down for a long time when many posts get added.
 
 # Future Enhancements
 Project is no longer being supported.
